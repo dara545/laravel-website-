@@ -37,20 +37,23 @@
             <aside id="sidebar">
               <div class="dark">
                 <h3>Neem contact op</h3>
-                <form class="quote">
+                          <form class="quote" action="/" method="POST">
+                            {{csrf_field() }}
                               <div>
                                   <label>Naam</label><br>
-                                  <input type="text" placeholder="Naam">
+                                  <input type="text" name="name" placeholder="Naam">
                               </div>
                               <div>
                                   <label>Email</label><br>
-                                  <input type="email" placeholder="Email adres">
+                                  <input type="email"  name="email" placeholder="Email adres">
                               </div>
                               <div>
                                   <label>Bericht</label><br>
-                                  <textarea placeholder="Bericht"></textarea>
+                                  <textarea placeholder="Bericht" name="message"></textarea>
                               </div>
-                              <button class="button_1" type="submit">Verzend</button>
+                              {{-- <input type="hidden" name="_token" value="{{ csrf _token() }}"> --}}
+                              <button class="button_1" type="submit" name="submit" >Verzend</button>
+
                         </form>
               </div>
             </aside>

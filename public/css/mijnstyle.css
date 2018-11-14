@@ -86,6 +86,7 @@ body{
   #showcase{
     min-height:400px;
     background-image:url('/showcase.jpg');
+    
     text-align:center;
     color:#ffffff;
   }
